@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "6845e6b6-a0d9-4c1d-a35e-96691515d53e",
+		"name": "NewCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7806025"
+	},
+	"item": [
+		{
+			"name": "TC_001: REGISTRO - REGISTRAR NOMBRE Y APELLIDO DEL CLIENTE.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TEST 001: REGISTRO - REGISTRAR NOMBRE Y APELLIDO\", function () {",
+							"    var firstName = pm.response.json().json.FirstName;",
+							"    pm.expect(firstName).to.eql(\"Juan Peréz\");",
+							"});",
+							"pm.test(\"TEST 002: STATUS CODE == 200 \", function () {",
+							"    pm.response.to.have.status(500);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"FirstName\": \"Juan Peréz\",\n    \"year\": 25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_test}}/post",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_002: REGISTRO - REGISTRAR PADRE DEL CLIENTE.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TEST 002: REGISTRO - REGISTRAR PADRE DEL CLIENTE\", function () {",
+							"    var FatherName = pm.response.json().json.FatherName;",
+							"    pm.expect(FatherName).to.eql(\"Armindo Peréz\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"FatherName\": \"Armindo Peréz\",\n    \"year\": 43\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_test}}/post",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_003: REGISTRO - REGISTRAR MADRE DEL CLIENTE.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TEST 003: REGISTRO - REGISTRAR MADRE DEL CLIENTE\", function () {",
+							"    var MotherName = pm.response.json().json.MotherName;",
+							"    pm.expect(MotherName).to.eql(\"Arminda Ortiz\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"MotherName\": \"Arminda Ortiz\",\n    \"year\": 43\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_test}}/post",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_004: REGISTRO - REGISTRAR MASCOTA DEL CLIENTE.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TEST 004: REGISTRO - REGISTRAR MASCOTA DEL CLIENTE\", function () {",
+							"    var DogName = pm.response.json().json.DogName;",
+							"    pm.expect(DogName).to.eql(\"Billy\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"DogName\": \"Billy\",\n    \"year\": 12\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_test}}/post",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TC_005: REGISTRO - REGISTRAR CEL DEL CLIENTE.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"TEST 004: REGISTRO - REGISTRAR CEL CLIENTE\", function () {",
+							"    var cel = pm.response.json().json.Cel;",
+							"    pm.expect(cel).to.eql(\"+595961808172\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Cel\": \"+595961808172\",\n    \"Direccion\": \"sss\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_test}}/post",
+					"host": [
+						"{{url_test}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url_test",
+			"value": "https://httpbin.org",
+			"type": "string"
+		}
+	]
+}
