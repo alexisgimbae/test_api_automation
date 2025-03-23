@@ -34,7 +34,7 @@ jobs:
           newman run NewCollection.postman_collection.json -r htmlextra --reporter-htmlextra-export newman-report.html || true
 
       - name: Upload HTML report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: newman-report
           path: newman-report.html
