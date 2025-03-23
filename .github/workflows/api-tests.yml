@@ -1,0 +1,37 @@
+name: Run Postman Collection with Newman
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Permite la ejecución manual del flujo de trabajo
+
+jobs:
+  newman-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Usa la versión de Node.js que prefieras
+
+      - name: Install Newman and htmlextra
+        run: |
+          npm install -g newman newman-reporter-htmlextra
+
+      - name: Run Newman collection
+        run: |
+          newman run NewCollection.postman_collection.json -r htmlextra --reporter-htmlextra-export newman-report.html || true
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v3
+        with:
+          name: newman-report
+          path: newman-report.html
