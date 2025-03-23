@@ -22,6 +22,9 @@ jobs:
         with:
           node-version: '18' # Usa la versión de Node.js que prefieras
 
+      - name: Clear Cache
+        run: rm -rf ~/.cache
+
       - name: Install Newman and htmlextra
         run: |
           npm install -g newman newman-reporter-htmlextra
