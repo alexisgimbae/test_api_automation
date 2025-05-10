@@ -18,7 +18,7 @@
 							"    pm.expect(firstName).to.eql(\"Juan Peréz\");",
 							"});",
 							"pm.test(\"TEST 002: STATUS CODE == 200 \", function () {",
-							"    pm.response.to.have.status(400);",
+							"    pm.response.to.have.status(200);",
 							"});",
 							""
 						],
