@@ -7,20 +7,8 @@ Sistema de pruebas automatizadas para APIs que ejecuta colecciones de Postman me
 
 ### 🔄 Flujo Completo del Sistema
 
-[Postman Collection]
-↓ (Export as JSON)
-[GitHub Repository]
-↓ (GitHub Actions Trigger)
-[Ubuntu Runner]
-↓ (Node.js Environment)
-[Newman CLI]
-↓ (HTTP Requests)
-[HTTP Bin API]
-↓ (JSON Responses)
-[Test Validation]
-↓ (HTML Report Generation)
-[GitHub Artifacts]
-text
+<img width="6691" height="2653" alt="deepseek_mermaid_20251106_b744bd" src="https://github.com/user-attachments/assets/6d792938-08e2-4049-8095-e0efd8e65d56" />
+
 
 
 ### 📊 Proceso Detallado
