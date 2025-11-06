@@ -37,13 +37,10 @@ Sistema de pruebas automatizadas para APIs que ejecuta colecciones de Postman me
 - **HTTP Bin** - API de testing para validaciones
 
 ## 📁 Estructura del Proyecto
-
-├── .github/
-│ └── workflows/
-│ └── api-tests.yml # Configuración del pipeline CI/CD
-├── NewCollection.postman_collection.json # Colección de pruebas Postman
-└── README.md
-text
+**Archivos principales:**
+- `.github/workflows/api-tests.yml` → Pipeline de GitHub Actions
+- `NewCollection.postman_collection.json` → Colección de pruebas Postman
+- `README.md` → Esta documentación
 
 
 ## 🧪 Casos de Prueba
