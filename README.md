@@ -1,4 +1,5 @@
 # 🚀 Automatización de APIs con Postman y Newman
+<img width="1536" height="1024" alt="ChatGPT Image 7 nov 2025, 11_03_26 a m" src="https://github.com/user-attachments/assets/5bb1bc70-132d-4104-8273-754d24da0ed8" />
 
 ## 📋 Descripción del Proyecto
 Sistema de pruebas automatizadas para APIs que ejecuta colecciones de Postman mediante Newman en un pipeline de CI/CD con GitHub Actions. Incluye validaciones de endpoints, reportes HTML y ejecución continua.
